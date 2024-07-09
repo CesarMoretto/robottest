@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.7.8 on win32)" generated="20240709 15:00:24.326" rpa="false" schemaversion="4">
+<suite id="s1" name="Teste1" source="c:\Users\csarm\OneDrive\Área de Trabalho\teste\teste1.robot">
+<test id="s1-t1" name="Caso de teste Exemplo" line="7">
+<kw name="Acessar a página da amazon" library="resource1">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240709 15:00:24.884" level="INFO">Opening browser 'chrome' to base url 'http://www.amazon.com.br'.</msg>
+<status status="PASS" starttime="20240709 15:00:24.882" endtime="20240709 15:00:28.368"/>
+</kw>
+<status status="PASS" starttime="20240709 15:00:24.881" endtime="20240709 15:00:28.369"/>
+</kw>
+<kw name="Pesquisar por celulares" library="resource1">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=id:twotabsearchtextbox</arg>
+<arg>text=celulares</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240709 15:00:28.372" level="INFO">Typing text 'celulares' into text field 'id:twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20240709 15:00:28.370" endtime="20240709 15:00:28.886"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=id:nav-search-submit-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240709 15:00:28.887" level="INFO">Clicking element 'id:nav-search-submit-button'.</msg>
+<status status="PASS" starttime="20240709 15:00:28.886" endtime="20240709 15:00:31.312"/>
+</kw>
+<status status="PASS" starttime="20240709 15:00:28.369" endtime="20240709 15:00:31.313"/>
+</kw>
+<kw name="Validar o resultado" library="resource1">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=Resultados</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20240709 15:00:31.314" endtime="20240709 15:00:31.389"/>
+</kw>
+<status status="PASS" starttime="20240709 15:00:31.314" endtime="20240709 15:00:31.390"/>
+</kw>
+<status status="PASS" starttime="20240709 15:00:24.879" endtime="20240709 15:00:31.391"/>
+</test>
+<doc>Teste Exemplo</doc>
+<status status="PASS" starttime="20240709 15:00:24.334" endtime="20240709 15:00:31.393"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Teste1">Teste1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
